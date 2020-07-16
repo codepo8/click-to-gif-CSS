@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to GIF CSS only</title>
+  <style>
+    body {
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    a {color:green}
+    p {clear: both;}
+
+    .click-to-gif img {display: block;}
+    
+    .click-to-gif input[type=checkbox] {
+      position: absolute;
+      left: -100vw;
+    }
+    label.click-to-gif {
+      display: block;
+      float: left;
+      background: DimGrey no-repeat center center;
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -256 1792 1792"><path d="M1288.678 637.83q0 37-33 56l-512 288q-14 8-31 8t-32-9q-32-18-32-55v-576q0-37 32-55 31-20 63-1l512 288q33 19 33 56zm128 0q0-104-40.5-198.5t-109.5-163.5q-69-69-163.5-109.5t-198.5-40.5q-104 0-198.5 40.5t-163.5 109.5q-69 69-109.5 163.5t-40.5 198.5q0 104 40.5 198.5t109.5 163.5q69 69 163.5 109.5t198.5 40.5q104 0 198.5-40.5t163.5-109.5q69-69 109.5-163.5t40.5-198.5zm256 0q0 209-103 385.5t-279.5 279.5q-176.5 103-385.5 103t-385.5-103q-176.5-103-279.5-279.5t-103-385.5q0-209 103-385.5t279.5-279.5q176.5-103 385.5-103t385.5 103q176.5 103 279.5 279.5t103 385.5z" fill="LightGrey"/></svg>') ;
+    }
+    .click-to-gif:hover, .click-to-gif:focus-within {
+      background: DarkSlateGrey no-repeat center center;
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -256 1792 1792"><path d="M1288.678 637.83q0 37-33 56l-512 288q-14 8-31 8t-32-9q-32-18-32-55v-576q0-37 32-55 31-20 63-1l512 288q33 19 33 56zm128 0q0-104-40.5-198.5t-109.5-163.5q-69-69-163.5-109.5t-198.5-40.5q-104 0-198.5 40.5t-163.5 109.5q-69 69-109.5 163.5t-40.5 198.5q0 104 40.5 198.5t109.5 163.5q69 69 163.5 109.5t198.5 40.5q104 0 198.5-40.5t163.5-109.5q69-69 109.5-163.5t40.5-198.5zm256 0q0 209-103 385.5t-279.5 279.5q-176.5 103-385.5 103t-385.5-103q-176.5-103-279.5-279.5t-103-385.5q0-209 103-385.5t279.5-279.5q176.5-103 385.5-103t385.5 103q176.5 103 279.5 279.5t103 385.5z" fill="MediumSeaGreen"/></svg>');
+    }
+    .click-to-gif input[type=checkbox] + img {
+      opacity: 0;
+    }
+    .click-to-gif input[type=checkbox]:checked + img {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+<h1>Click to GIF example</h1>
+<p class="info">Click or tab/space the image below to see the GIF</p>
+
+<form action="">
+
+<label class="click-to-gif" title="click/hit space to show gif">
+  <input type="checkbox">
+  <img src="https://media.giphy.com/media/XV74ZvGRXcZdS/source.gif" 
+        alt="Captain America saying he can do this all day - animated"
+        width="500" height="180">
+</label>
+
+</form>
+<p>Also check out the <a href="index-reduced-motion.html">checking reduced motion example</a>.</p>
+<p>More info on the <a href="">Blog Post</a></p>
+
+</body>
+</html>
